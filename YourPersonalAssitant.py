@@ -4,7 +4,7 @@
 #Imports
 import math
 import time
-import datetime
+import random
 from datetime import date
 import sys
 #Variables
@@ -22,6 +22,7 @@ todaysDate = str("null")
 #Floats
 number = float(0)
 #Intergers
+randomNumber = int()
 counter = int(0)
 counter2 = int(0)
 numberOne =  int(0)
@@ -86,9 +87,11 @@ def multiply():
     print(numberThree)
     return
 
+
 #Credits Function
 def credits():
     print("I was made by Liam Quinn")
+
 
 #More About Me Function
 def techinfo():
@@ -108,10 +111,48 @@ def techinfo():
     if moreInfo == "n":
         return
 
+
 #Source Code Function
 def sourceCode():
     print("The link to my source code is 'https://github.com/Gamechamp30/JoeThePersonalAssistant'")
 
+
+#Insult Me Function
+def insultMe():
+    randomNumber = random.randint(0,10)
+
+    if randomNumber == 0:
+        print("You are more disapointing than an unsalted pretzel.")
+    
+    if randomNumber == 1:
+        print("Don’t be ashamed of who you are. That’s your parents’ job.")
+    
+    if randomNumber == 2:
+        print("Someday you’ll go far… and I really hope you stay there.")
+
+    if randomNumber == 3:
+        print("I’m busy right now; can I ignore you another time?")
+
+    if randomNumber == 4:
+        print("You are like a cloud. When you disappear, it’s a beautiful day.")
+
+    if randomNumber == 5:
+        print("You’re the reason this country has to put directions on shampoo.")
+
+    if randomNumber == 6:
+        print("I never forget a face, but in your case, I'll make an exception.")
+
+    if randomNumber == 7:
+        print("Only two things are infinite: the universe and human stupidity, and I'm not so sure about the first.")
+
+    if randomNumber == 8:
+        print("You look like you came from a donation pile.")
+
+    if randomNumber == 9:
+        print("*Thumbs down*")
+
+    if randomNumber == 10:
+        print("You're the gray sprinkle on a rainbow cupcake.")
 
 
 #Exit Function
@@ -192,6 +233,11 @@ while running == True:
         if action == "what is the date":
             whatDayIsIt()
             counter = counter2 + 1
+        
+        #Insult Me
+        if action == "insult me":
+            insultMe()
+            counter = counter2 + 1
 
         #Exit
         if action == "exit":
@@ -213,8 +259,10 @@ while running == True:
             techinfo()
             counter = counter2 + 1
 
-        
+
 
         #If user input isn't valid:    
         if counter == 0:
             print("Sorry, I can't help with that")
+
+
