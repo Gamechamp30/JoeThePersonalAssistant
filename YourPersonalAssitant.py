@@ -36,6 +36,9 @@ def funclist():
     print("what can i ask you (This command)")
     print("find square root")
     print("multiply")
+    print("open spotify")
+    print("open youtube music")
+    print("open google")
     print("what time is it")
     print("what is the date")
     print("who made you")
@@ -89,34 +92,6 @@ def multiply():
     return
 
 
-#Credits Function
-def credits():
-    print("I was made by Liam Quinn")
-
-
-#More About Me Function
-def techinfo():
-    print("I was made by Liam Quinn in Python 3.9.4")
-    moreInfo = input("Would you like to know more? (y/n) ")
-    if moreInfo == "y":
-        print("\nThis project was started on 11/10/21")
-        print("The imports Liam used are as follows:")
-        print("math")
-        print("datetime")
-        print("time")
-        print("sys")
-        print("My internal programing contains over 200 lines as of 11/12/21")
-        print("I am also completly open source")
-        print("You can use the 'link to source code' command to find my code")
-
-    if moreInfo == "n":
-        return
-
-
-#Source Code Function
-def sourceCode():
-    print("The link to my source code is 'https://github.com/Gamechamp30/JoeThePersonalAssistant'")
-
 #Spotify Function
 def openSpotify():
     print("This feature is still under development, try 'open google'")
@@ -130,7 +105,6 @@ def openYTMusic():
 def openChrome():
     print("Launching Chrome...")
     webbrowser.open("google.com")
-
 
 #Insult Me Function
 def insultMe():
@@ -169,6 +143,33 @@ def insultMe():
     if randomNumber == 10:
         print("You're the gray sprinkle on a rainbow cupcake.")
 
+#Credits Function
+def credits():
+    print("I was made by Liam Quinn")
+
+
+#More About Me Function
+def techinfo():
+    print("I was made by Liam Quinn in Python 3.9.4")
+    moreInfo = input("Would you like to know more? (y/n) ")
+    if moreInfo == "y":
+        print("\nThis project was started on 11/10/21")
+        print("The imports Liam used are as follows:")
+        print("math")
+        print("datetime")
+        print("time")
+        print("sys")
+        print("My internal programing contains over 200 lines as of 11/12/21")
+        print("I am also completly open source")
+        print("You can use the 'link to source code' command to find my code")
+
+    if moreInfo == "n":
+        return
+
+
+#Source Code Function
+def sourceCode():
+    print("The link to my source code is 'https://github.com/Gamechamp30/JoeThePersonalAssistant'")
 
 #Exit Function
 def exit():
