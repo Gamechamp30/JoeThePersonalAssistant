@@ -7,6 +7,7 @@ import time
 import random
 from datetime import date
 import sys
+import webbrowser
 #Variables
 
 #Booleans
@@ -116,6 +117,15 @@ def techinfo():
 def sourceCode():
     print("The link to my source code is 'https://github.com/Gamechamp30/JoeThePersonalAssistant'")
 
+#Spotify Function
+def openSpotify():
+    print("This feature is still under development, try 'open google'")
+
+#Google function:
+def openChrome():
+    print("Launching Chrome...")
+    webbrowser.open("google.com")
+
 
 #Insult Me Function
 def insultMe():
@@ -193,7 +203,6 @@ def exit():
         return
 
 
-#Start of script
 #Saying hello and asking for the user's name
 print("Hello!")
 userName = input("What's your name? ")
@@ -237,6 +246,16 @@ while running == True:
         #Insult Me
         if action == "insult me":
             insultMe()
+            counter = counter2 + 1
+
+        #Spotify
+        if action == "open spotify":
+            openSpotify()
+            counter = counter2 + 1
+
+        #Chrome
+        if action == "open google":
+            openChrome()
             counter = counter2 + 1
 
         #Exit
