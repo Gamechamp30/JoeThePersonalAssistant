@@ -121,6 +121,11 @@ def sourceCode():
 def openSpotify():
     print("This feature is still under development, try 'open google'")
 
+#Youtube Music
+def openYTMusic():
+    print("Opening YouTube Music in your default browser...")
+    webbrowser.open("https://music.youtube.com/")
+
 #Google function:
 def openChrome():
     print("Launching Chrome...")
@@ -251,6 +256,11 @@ while running == True:
         #Spotify
         if action == "open spotify":
             openSpotify()
+            counter = counter2 + 1
+
+        #YouTube Music
+        if action == "open youtube music":
+            openYTMusic()
             counter = counter2 + 1
 
         #Chrome
