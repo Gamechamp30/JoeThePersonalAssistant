@@ -132,7 +132,7 @@ def insultMe():
         print("I never forget a face, but in your case, I'll make an exception.")
 
     if randomNumber == 7:
-        print("Only two things are infinite: the universe and human stupidity, and I'm not so sure about the first.")
+        print("Only two things are infinite: the universe and your stupidity, and I'm not so sure about the first.")
 
     if randomNumber == 8:
         print("You look like you came from a donation pile.")
@@ -142,6 +142,12 @@ def insultMe():
 
     if randomNumber == 10:
         print("You're the gray sprinkle on a rainbow cupcake.")
+
+#Report a bug
+def reportBug():
+    print("Click on the 'New Issue' button")
+    print("(It's near the top right)")
+    webbrowser.open("https://github.com/Gamechamp30/JoeThePersonalAssistant/issues")
 
 #Credits Function
 def credits():
@@ -156,10 +162,12 @@ def techinfo():
         print("\nThis project was started on 11/10/21")
         print("The imports Liam used are as follows:")
         print("math")
-        print("datetime")
         print("time")
+        print("random")
+        print("datetime")
         print("sys")
-        print("My internal programing contains over 200 lines as of 11/12/21")
+        print("webbrowser")
+        print("My internal programing contains over 300 lines as of 11/15/21")
         print("I am also completly open source")
         print("You can use the 'link to source code' command to find my code")
 
@@ -267,6 +275,11 @@ while running == True:
         #Chrome
         if action == "open google":
             openChrome()
+            counter = counter2 + 1
+        
+        #Report a bug
+        if action == "report a bug":
+            reportBug()
             counter = counter2 + 1
 
         #Exit
