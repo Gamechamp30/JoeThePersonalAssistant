@@ -15,6 +15,7 @@ running = bool(True)
 noValidInput = bool (True)
 #Strings
 action = str("null")
+devAction = str("null")
 userName = str("null")
 sqrtResult = str("null")
 devPassword = str("")
@@ -65,6 +66,17 @@ def devPanel():
                 
     if password != devPassword:
         print("Incorrect Password")
+
+    devAction = input("What do you need to do? ")
+
+    if devAction == "debug":
+        print("Starting Debugger...\n")
+        time.sleep(5)
+        print("No errors found, exiting")
+    
+    if devAction == "Clear cache": 
+        print("Clearing cache...")
+        print("Current cache: (0MB/250MB)")
     return
 
 
