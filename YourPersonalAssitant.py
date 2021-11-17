@@ -232,7 +232,8 @@ def exit():
 #Saying hello and asking for the user's name
 print("Hello!")
 userName = input("What's your name? ")
-print("Hi " + userName + ", I am Jeff, your personal assistant.") #And no, we aren't Jeff Bezos; we aren't going to steal your personal data
+print("Hi " + userName + ", I am Jeff, your personal assistant.") #And no, we aren't Jeff Bezos; we aren't going to steal your data
+print("To get started type: 'what can i ask you' ")
 
 
 while running == True:
