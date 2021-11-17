@@ -27,16 +27,20 @@ number = float(0)
 randomNumber = int()
 counter = int(0)
 counter2 = int(0)
-numberOne =  int(0)
-numberTwo = int(0)
+subtractionOne = int(0)
+subtractionTwo = int(0)
+subtractionThree = int(0)
+multiplicationOne =  int(0)
+multiplicationTwo = int(0)
 numberThree = int(0)
 #Functions
 
 #Function List
 def funclist():
     print("what can i ask you (This command)")
-    print("find square root")
+    print("square root")
     print("multiply")
+    print("subtract")
     print("open spotify")
     print("open youtube music")
     print("open google")
@@ -54,6 +58,24 @@ def squareRoot():
     sqrtResult = math.sqrt(number)
     print(sqrtResult)
     print("There you go!")
+    return
+
+#Subtraction Function
+def subtraction():
+    subtractionOne = int(input("What is the first number of the equation? "))
+    subtractionTwo = int(input("What is the second number of the equation? "))
+    subtractionThree = subtractionOne - subtractionTwo
+    print("The difference is:")
+    print(subtractionThree)
+
+
+#Multiplication Function
+def multiply():
+    multiplicationOne = int(input("What is the first number of the equation? "))
+    multiplicationTwo = int(input("What is the second number of the equation? "))
+    numberThree = multiplicationOne * multiplicationTwo
+    print("The product is:")
+    print(numberThree)
     return
 
 
@@ -91,16 +113,6 @@ def whatTimeIsIt():
 def whatDayIsIt():
     todaysDate = date.today()
     print("Today's date is:", todaysDate)
-    return
-
-
-#Multiplication Function
-def multiply():
-    numberOne = int(input("What is the first number of the equation? "))
-    numberTwo = int(input("What is the second number of the equation? "))
-    numberThree = numberOne * numberTwo
-    print("The product is:")
-    print(numberThree)
     return
 
 
@@ -246,7 +258,7 @@ while running == True:
             counter = counter2 + 1
 
         #Square Root
-        if action == "find square root":
+        if action == "square root":
             squareRoot()
             counter = counter2 + 1
 
