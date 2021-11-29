@@ -78,6 +78,12 @@ def multiply():
     print(numberThree)
     return
 
+#Encoder Function
+def encode():
+    encode1 = str(input("What do you want me to encode? "))
+    codec = str(input("What codec would you like to use? (Press enter for default) "))
+    encode2 = encode1.encode(encoding=codec, errors="strict")
+    print(encode2)
 
 #Developer Panel Function
 def devPanel():
@@ -152,7 +158,7 @@ def insultMe():
     if randomNumber == 5:
         print("You’re the reason this country has to put directions on shampoo.")
 
-    if randomNumber == 6:
+    if randomNumber == 6: 
         print("I never forget a face, but in your case, I'll make an exception.")
 
     if randomNumber == 7:
@@ -275,6 +281,11 @@ while running == True:
         #Multiply
         if action == "multiply":
             multiply()
+            counter = counter2 + 1
+
+        #Encode
+        if action == "encode":
+            encode()
             counter = counter2 + 1
 
         #Day
