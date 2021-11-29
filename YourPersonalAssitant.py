@@ -82,9 +82,14 @@ def multiply():
 #Encoder Function
 def encode():
     encode1 = str(input("What do you want me to encode? "))
-    codec = str(input("What codec would you like to use? (Press enter for default) "))
+    codec = str(input("What codec would you like to use? (Press enter for default and type 'codec list' for a list of codecs) "))
     encode2 = encode1.encode(encoding=codec, errors="strict")
     print(encode2)
+    return
+
+#Decoder Function
+def decode():
+    print("placeholder")
 
 #Developer Panel Function
 def devPanel():
