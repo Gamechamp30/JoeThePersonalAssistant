@@ -14,6 +14,8 @@ import webbrowser
 running = bool(True)
 noValidInput = bool (True)
 #Strings
+encode1 = str("null")
+codec = str("null")
 action = str("null")
 devAction = str("null")
 userName = str("null")
@@ -33,6 +35,8 @@ subtractionThree = int(0)
 multiplicationOne =  int(0)
 multiplicationTwo = int(0)
 numberThree = int(0)
+#Bytes (I have no idea what this is, but we can pretend)
+encode2 = ("null")
 #Functions
 
 #Function List
@@ -50,7 +54,6 @@ def funclist():
     print("who made you")
     print("technical info")
     print("link to source code")
-
     print("exit")
 
 #Square Root function
@@ -82,9 +85,33 @@ def multiply():
 #Encoder Function
 def encode():
     encode1 = str(input("What do you want me to encode? "))
+
     codec = str(input("What codec would you like to use? (Press enter for default and type 'codec list' for a list of codecs) "))
+
+    if codec == "codec list":
+        print("ascii (default)")
+        print("cp037")
+        print("cp437")
+        print("cp1140")
+        print("cp1250")
+        print("latin-1")
+        print("iso8859-2")
+        print("iso8859-15")
+        print("utf-32")
+        print("utf-32-be")
+        print("utf-32-le")
+        print("utf-16")
+        print("utf-16-be")
+        print("utf-16-le")
+        print("utf-7")
+        print("utf-8")
+        print("utf-8-sig")
+        return
+
     encode2 = encode1.encode(encoding=codec, errors="strict")
+    print("The encoded string is: ")
     print(encode2)
+
     return
 
 #Decoder Function
