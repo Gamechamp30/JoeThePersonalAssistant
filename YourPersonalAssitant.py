@@ -41,6 +41,7 @@ def funclist():
     print("square root")
     print("multiply")
     print("subtract")
+    print("encode")
     print("open spotify")
     print("open youtube music")
     print("open google")
