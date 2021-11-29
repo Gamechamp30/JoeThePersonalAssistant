@@ -15,6 +15,7 @@ running = bool(True)
 noValidInput = bool (True)
 #Strings
 encode1 = str("null")
+encode2 = str("null")
 codec = str("null")
 action = str("null")
 devAction = str("null")
@@ -35,8 +36,6 @@ subtractionThree = int(0)
 multiplicationOne =  int(0)
 multiplicationTwo = int(0)
 numberThree = int(0)
-#Bytes (I have no idea what this is, but we can pretend)
-encode2 = ("null")
 #Functions
 
 #Function List
