@@ -17,11 +17,13 @@ noValidInput = bool (True)
 encode1 = str("null")
 encode2 = str("null")
 codec = str("null")
+decode1 = bytes("null", "utf-8", "strict")
+decode2 = bytes("null", "utf-8", "strict")
 action = str("null")
 devAction = str("null")
 userName = str("null")
 sqrtResult = str("null")
-devPassword = str("")
+devPassword = str("null")
 password = str ("null")
 todaysDate = str("null")
 #Floats
@@ -113,33 +115,6 @@ def encode():
 
     return
 
-#Decoder Function
-def decode():
-    print("placeholder")
-
-#Developer Panel Function
-def devPanel():
-    password = input("What is the developer password? ")
-
-    if password == devPassword :
-        print("Welcome to the developer panel")
-                
-    if password != devPassword:
-        print("Incorrect Password")
-
-    devAction = input("What do you need to do? ")
-
-    if devAction == "debug":
-        print("Starting Debugger...\n")
-        time.sleep(5)
-        print("No errors found, exiting")
-    
-    if devAction == "Clear cache": 
-        print("Clearing cache...")
-        print("Current cache: (0MB/250MB)")
-    return
-
-
 #Time Function
 def whatTimeIsIt():
     print("The current time is:")
@@ -170,7 +145,7 @@ def openChrome():
 
 #Insult Me Function
 def insultMe():
-    randomNumber = random.randint(0,10)
+    randomNumber = random.randint(0,11)
 
     if randomNumber == 0:
         print("You are more disapointing than an unsalted pretzel.")
@@ -204,6 +179,9 @@ def insultMe():
 
     if randomNumber == 10:
         print("You're the gray sprinkle on a rainbow cupcake.")
+
+    if randomNumber == 11:
+        print("You're probably in chess club.")
 
 #Report a bug
 def reportBug():
@@ -318,6 +296,11 @@ while running == True:
         #Encode
         if action == "encode":
             encode()
+            counter = counter2 + 1
+
+        #Decode
+        if action == "decode":
+            decode()
             counter = counter2 + 1
 
         #Day
