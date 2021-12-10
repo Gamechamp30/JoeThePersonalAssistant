@@ -34,7 +34,8 @@ characters = list(string.ascii_letters + string.digits + "!@#$%^&*()")
 #Floats
 number = float(0)
 #Intergers
-randomNumber = int()
+wordCount = int(0)
+randomNumber = int(0)
 counter = int(0)
 counter2 = int(0)
 subtractionOne = int(0)
@@ -48,6 +49,7 @@ numberThree = int(0)
 #Function List
 def funclist():
 	print("what can i ask you (This command)")
+	print("password")
 	print("square root")
 	print("multiply")
 	print("subtract")
@@ -57,7 +59,6 @@ def funclist():
 	print("open google")
 	print("what time is it")
 	print("what is the date")
-	print("who made you")
 	print("technical info")
 	print("link to source code")
 	print("exit")
@@ -120,9 +121,73 @@ def encode():
 
 	return
 
-#Alpebetizer Function
-def alpabet():
-	str(input("How many words need to be sorted? (Maximum 20)"))
+#Restart Function for rps
+def restartrps():
+	playAgain = str(input("Would you like to play again? (y/n) "))
+
+	if playAgain == "y":
+		rps()
+
+	if playAgain == "n":
+		print("Exiting...")
+		return
+
+
+#Rock Paper Scissors
+#1 = Rock
+#2 = Paper
+#3 = Scissors
+
+def rps():
+	playerIn = str(input("What is your move? (rock, paper, or scissors) "))
+
+	if playerIn == "rock":
+
+		aiOut = random.randint(2,3)
+
+		if aiOut == 2:
+			print("You lose, I picked paper")
+		
+			restartrps()
+			
+
+		if aiOut == 3:
+			print("You win, I picked scissors?")
+			
+			restartrps()
+
+	if playerIn == "paper":
+
+		#THIS IGNORES THE ABOVE KEY FOR 1,2,3
+		#1 = Paper
+		#2 = Rock
+		#3 = Scissors
+		aiOut = random.randint(2,3)
+
+		if aiOut == 2:
+			print("You win, I picked rock")
+
+			restartrps()
+
+		if aiOut == 3:
+			print("You lose, I picked scissors")
+
+			restartrps()
+
+	if playerIn == "scissors":
+
+		aiOut = random.randint(1,2)
+
+		if aiOut == 1:
+			print("You lose, I picked rock")
+
+			restartrps()
+
+		if aiOut == 2:
+			print("You win, I picked paper")
+
+			restartrps()
+
 
 #Time Function
 def whatTimeIsIt():
@@ -154,7 +219,7 @@ def openChrome():
 
 #Insult Me Function
 def insultMe():
-	randomNumber = random.randint(0,11)
+	randomNumber = random.randint(0,14)
 
 	if randomNumber == 0:
 		print("You are more disapointing than an unsalted pretzel.")
@@ -192,9 +257,16 @@ def insultMe():
 	if randomNumber == 11:
 		print("You're probably in chess club.")
 
+	if randomNumber == 12:
+		print("Your're so ugly not even Ripley's would belive it.")
+
+	if randomNumber == 13:
+		("You're so ugly Bob the Builder took one look at you and said 'We can't fix it'")
+
+	if randomNumber == 14:
+		("You're so ugly, your birth certificate is an apology letter")
 
 #Password GENERATOR
-
 #Huge thanks to Nolan from Quinn Programming for this code!
 
 def getRandomPass():
@@ -240,10 +312,6 @@ def reportBug():
 	print("(It's near the top right)")
 	webbrowser.open("https://github.com/Gamechamp30/JoeThePersonalAssistant/issues")
 
-#Credits Function
-def credits():
-	print("I was made by Liam Quinn")
-
 
 #More About Me Function
 def techinfo():
@@ -258,7 +326,7 @@ def techinfo():
 		print("datetime")
 		print("sys")
 		print("webbrowser")
-		print("My internal programing contains over 300 lines as of 11/15/21")
+		print("My internal programing contains over 500 lines as of 12/10/21")
 		print("I am also completly open source")
 		print("You can use the 'link to source code' command to find my code")
 
@@ -345,6 +413,11 @@ while running == True:
 			encode()
 			counter = counter2 + 1
 
+		#RPS
+		if action == "rps":
+			rps()
+			counter = counter2 + 1
+
 		#Day
 		if action == "what is the date":
 			whatDayIsIt()
@@ -384,11 +457,6 @@ while running == True:
 		if action == "exit":
 			exit()   
 			counter = counter2 + 1    
-
-		#Info
-		if action == "who made you":
-			credits()
-			counter = counter2 + 1
 
 		#Source Code
 		if action == "link to source code":
