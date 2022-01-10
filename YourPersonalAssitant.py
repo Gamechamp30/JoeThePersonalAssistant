@@ -152,7 +152,7 @@ def rps():
 			
 
 		if aiOut == 3:
-			print("You win, I picked scissors?")
+			print("You win, I picked scissors")
 			
 			restartrps()
 
@@ -201,11 +201,14 @@ def whatDayIsIt():
 	todaysDate = date.today()
 	print("Today's date is:", todaysDate)
 	return
-
+#Not an easter egg
+def easteregg():
+	print("Ya found 1 of 25 easter eggs. Good luck finding the other ones!")
 
 #Spotify Function
 def openSpotify():
-	print("This feature is still under development, try 'open google'")
+	print("Opening Spotify in your default browser...")
+	webbrowser.open("https://open.spotify.com/")
 
 #Youtube Music
 def openYTMusic():
@@ -267,10 +270,10 @@ def insultMe():
 		("You're so ugly, your birth certificate is an apology letter")
 
 #Password GENERATOR
-#Huge thanks to Nolan from Quinn Programming for this code!
+#Huge thanks to Gavin from Quinn Programming for this code!
 
 def getRandomPass():
-	length = int(input("Enter password length: "))
+	length = int(input("Enter password length: ")) 
 
 	alphabetsCount = int(input("Enter alphabets count in password: "))
 	digitCount = int(input("Enter digits count in password: "))
